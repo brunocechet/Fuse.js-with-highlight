@@ -1,0 +1,28 @@
+{
+  "name": "fuse.js-highlight",
+  "version": "1.0.0",
+  "description": "Fuse.js with highlight",
+  "main": "index.js",
+  "dependencies": {
+    "fuse.js": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunocechet/Fuse.js-with-highlight.git"
+  },
+  "keywords": [
+    "Fuse.js",
+    "fuse",
+    "highlight"
+  ],
+  "author": "Bruno Cechet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunocechet/Fuse.js-with-highlight/issues"
+  },
+  "homepage": "https://github.com/brunocechet/Fuse.js-with-highlight#readme"
+}
