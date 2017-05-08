@@ -15,13 +15,13 @@ var options = {
   ]
 };
 var fuse = new Fuse(list, options); // "list" is the item array
-var result = fuse.search("midia");
+var result = fuse.search("a");
 
 result.forEach((resultItem) => {
   resultItem.matches.forEach((matchItem) => {
     var text = resultItem.item[matchItem.key];
     var result = []
-    var matches = matchItem.indices;
+    var matches = [].concat(matchItem.indices); // limpar referencia
     var pair = matches.shift()
     
     for (var i = 0; i < text.length; i++) {
