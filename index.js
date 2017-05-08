@@ -19,11 +19,7 @@ var result = fuse.search("midia");
 
 result.forEach((resultItem) => {
   resultItem.matches.forEach((matchItem) => {
-    
-
     var text = resultItem.item[matchItem.key];
-    resultItem.getPropert
-
     var result = []
     var matches = matchItem.indices;
     var pair = matches.shift()
