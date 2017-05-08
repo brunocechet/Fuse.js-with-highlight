@@ -17,7 +17,7 @@ var options = {
 var fuse = new Fuse(list, options); // "list" is the item array
 var result = fuse.search("a");
 
-result.forEach((resultItem) => {
+var highlighter = function(resultItem){
   resultItem.matches.forEach((matchItem) => {
     var text = resultItem.item[matchItem.key];
     var result = []
@@ -36,7 +36,17 @@ result.forEach((resultItem) => {
       }
     }
     resultItem.highlight = result.join('');
+
+    if(resultItem.children && resultItem.children.length > 0){
+      resultItem.children.forEach((child) => {
+        highlighter(child);
+      });
+    }
   });
+};
+
+result.forEach((resultItem) => {
+  highlighter(resultItem);
 });
 
 console.log(JSON.stringify(result, null, '  '));
